@@ -1,0 +1,308 @@
+/* Importamos la funte de letra que vamos a utilizar */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
+/* Quitamos los estilos por defecto que trae la pagina web */
+
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	border: none;
+	outline: none;
+    font-family: "Oswald", sans-serif;
+}
+
+/* Aqui los estilos del body */
+
+body{
+    background-color: white;
+}
+
+/* Aqui van los estilos del contenedor de toda la pagina */
+
+.main-container{
+    background-image: url('https://storage.googleapis.com/cdn-bucket-ixulabs-platform/IXU-0001/Tipos-de-plataformas/3e6230a4-2a07-4e0c-a471-95d8efe826c0-Tipos-de-plataformas');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* Aqui tenemos todos los estilos de la navbar */
+
+.main-container nav {
+    /* position: fixed; */
+    background-color: black;
+    box-shadow: 0px 0px 16px -2px rgba(128, 128, 128, 0.551);
+    border-radius: 10px;
+    width: 98%;
+    height: 100px;
+    margin: 17px;
+    display: flex;
+    color: white;
+}
+
+.main-container nav .logo{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    cursor: pointer;
+}
+
+.main-container nav .logo img{
+    height: 70px;
+}
+
+.main-container nav ul{
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container nav ul li a{
+    color: white;
+    font-size: 30px;
+}
+.main-container nav ul li:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.main-container nav .inicio{
+    justify-content: end;
+    padding-right: 100px;
+}
+
+/* Aqui ponemos los estilos del catalogo de servicios  */
+
+.catalogo{
+
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    margin: auto auto;
+    width: 97%;
+    min-height: 600px;
+    height: 100%;
+    margin-top: 100px;
+    /* box-shadow: inset 0px 0px 16px -2px rgba(0,0,0,0.65); */
+}
+
+
+
+.servicio{
+    border: 1px solid;
+    position: relative;
+    border-radius: 9px;
+    height: 420px;
+    width: 350px;
+    min-height: 550px;
+    min-width: 350px;
+    max-height: 550px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    box-shadow: 0px 0px 16px -2px rgba(0,0,0,0.65);
+}
+
+/* Aqui van los colores de los servicios */
+
+.crunchyroll{
+    background-color: #FF9100 ;
+}
+.deezer{
+    background-color: #19AA5C ;
+}
+.disney{
+    background-color: #20B3DF ;
+}
+.hbo{
+    background-color: grey ;
+}
+.netflix{
+    background-color: #E50914 ;
+}
+.prime_video{
+    background-color: #4FC3F7 ;
+}
+.spotify{
+    background-color: #12C64B ;
+}
+
+.servicio-imagen{
+    border-radius: 9px 9px 0 0;
+    width: 100%;
+    height: 380px;
+    min-height: 200px;
+    max-height: 200px;
+    display: grid;
+    place-items: center;
+    background-color: white;
+}
+.servicio-imagen img{
+    width: 128px;
+}
+.servicio-informacion{
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 0 0 9px 9px;
+}
+.servicio-texto{
+    margin: 6px 15px;
+    text-align: justify;
+    min-height: 220px;
+    max-height: 220px;
+    font-size: 15px;
+}
+.servicio-funciones{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.servicio-funciones button{
+    border-radius: 16px;
+    padding: 8px;
+    color: black;
+    height: 40px;
+    width: 130px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: white;
+
+}
+.servicio button:hover{
+    background-color: black;
+    color: white;
+    box-shadow: 0px 0px 16px -2px black;
+}
+
+/* Aqui ponemos los estilos del footer */
+
+footer{
+    background-color: black;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    width: 100%;
+    height: 305px;
+    top: 100%;
+    margin-top: 200px;
+}
+.wave{
+    bottom: 0;
+    width: 100%;
+    opacity: 0.7;
+    z-index: 0;
+}
+.contactos{
+    display: flex;
+    z-index: 2;
+    gap: 100px;
+}
+
+.contacto{
+    cursor: pointer;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.contacto a{
+    color: white;
+}
+.contactos img{
+    width: 64px;
+}
+
+/* Aqui ponemos los estilos del scroll */
+
+.catalogo::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 1em;
+}
+.catalogo::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.544);
+}
+
+/* Aqui ponemos el css de la ventana de confirmacion de compra */
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.4); 
+}
+/* Contenido del modal */
+.modal-content {
+    display: flex; 
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin: 15% auto;
+    padding: 40px;
+    width: 80%; 
+    max-width: 600px; 
+    border-radius: 10px;
+}
+#modalPrice{
+    font-size: 30px;
+    color: green;
+}
+.modal-info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-info button{
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    width: 50%;
+}
+
+.modal-info button:hover{
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+    font-size: 20px;
+    width: 50%;
+}
+
+button{
+    cursor: pointer;
+}
